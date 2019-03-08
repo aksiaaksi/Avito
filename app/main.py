@@ -22,17 +22,16 @@ hello2 =  create_ad (
 
 add_ad(ads, hello1)
 add_ad(ads, hello2)
-#
-# print(ads)
+
+#print(ads)
 
 
-area = 'московский'
-search_lowercased = area.strip().lower()
+cost = 100_000
+#search_lowercased = area.strip().lower()
 result = []
 
 for ad in ads:
-    for i in ad['area']:
-        if search_lowercased == i.lower():
-            result.append(ad)
+    if cost == ad['cost']:
+       result.append(ad)
 
 print(result)

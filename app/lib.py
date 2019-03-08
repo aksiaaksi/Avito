@@ -28,7 +28,7 @@ def price_search(container, price):
     result = []
 
     for ad in container:
-        if price == ad['cost']:
+        if price <= ad['cost']:
             result.append(ad)
 
     return result
