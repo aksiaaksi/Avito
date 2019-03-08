@@ -6,3 +6,6 @@ def create_ad(category,title,description,cost,contact):
         'cost': cost,
         'contact': contact
     }
+
+def add_ad(container, ad):
+    container.apend(ad)
