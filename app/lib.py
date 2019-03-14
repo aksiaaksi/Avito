@@ -11,15 +11,13 @@ def create_ad(category,title,description,cost,contact,area):
 def add_ad(container, ad):
     container.append(ad)
 
-def search_by_districts(container, area, title):
+def search_by_districts(container, area):
     search_lowercased = area.strip().lower()
-    title_ad = title.strip().lower()
-
     result = []
-    for ad in container:
-            for i in ad['area']:
-                if search_lowercased == i.lower():
-                    result.append(ad)
+    for ads in container:
+            for ad in ads['area']:
+                if search_lowercased == ad.lower():
+                    result.append(ads)
                     continue
 
     return result
