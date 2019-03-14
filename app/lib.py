@@ -22,7 +22,7 @@ def search_by_districts(container, area):
 
     return result
 
-def price_search(container, price):
+def search_by_price(container, price):
     result = []
 
     for ad in container:
