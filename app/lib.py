@@ -15,10 +15,10 @@ def search_by_districts(container, area):
     search_lowercased = area.strip().lower()
     result = []
     for ads in container:
-            for ad in ads['area']:
-                if search_lowercased == ad.lower():
-                    result.append(ads)
-                    continue
+        for ad in ads['area']:
+            if search_lowercased == ad.lower():
+                result.append(ads)
+                continue
 
     return result
 
