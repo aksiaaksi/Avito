@@ -37,6 +37,11 @@ def search_by_districts(container, area):
 
 
 def search_by_price(container, price):
+
+    """
+    >>> search_by_price([{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 100000, 'contact': '+7988123456', 'area': 'Новосавиновский'},{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 40_000, 'contact': '+7988123456', 'area': 'Вахитовский'}],90_000)
+    [{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 100000, 'contact': '+7988123456', 'area': 'Новосавиновский'}]
+    """
     result = []
 
     for ad in container:
