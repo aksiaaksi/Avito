@@ -22,17 +22,19 @@ def add_ad(container, ad):
 
     container.append(ad)
 
-def search_by_districts(container, area):
+def search_by_districts(container, areas):
 
     """
-    >>> search_by_districts([{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 100000, 'contact': '+7988123456', 'area': 'Новосавиновский'},{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 100_000, 'contact': '+7988123456', 'area': 'Вахитовский'}],'Новосавиновский')
+    >>> search_by_districts([{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 100000, 'contact': '+7988123456', 'area': 'Новосавиновский'},{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 100_000, 'contact': '+7988123456', 'area': 'Вахитовский'}],{'Приволжский','Новосавиновский'})
     [{'category': 'авто', 'title': 'ваз2101', 'description': '2011 года выпуска', 'cost': 100000, 'contact': '+7988123456', 'area': 'Новосавиновский'}]
     """
-    search_lowercased = area.strip().lower()
     result = []
-    for ads in container:
-        if search_lowercased == ads['area'].lower():
-            result.append(ads)
+    for area in areas:
+        search_lowercased = area.strip().lower()
+
+        for ads in container:
+            if search_lowercased == ads['area'].lower():
+                result.append(ads)
     return result
 
 
